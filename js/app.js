@@ -44,11 +44,11 @@ export default class Sketch {
   }
 
   settings() {
-    let that = this
+  
     this.settings = {
       progress: 0,
     }
-    this.gui = new dat.GUI()
+    this.gui = new gui()
     this.gui.add(this.settings, "progress", 0, 1, 0.01)
   }
 
@@ -65,7 +65,7 @@ export default class Sketch {
   }
 
   addObjects() {
-    let that = this
+
     this.material = new THREE.ShaderMaterial({
       extensions: {
         derivatives: "#extension GL_OES_standard_derivatives : enable",
